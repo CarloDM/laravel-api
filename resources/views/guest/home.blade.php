@@ -2,10 +2,7 @@
 @section('content')
 
 <div class="container">
-    <h1>home pubblica</h1>
-
-
-    </div>
+  <div id='app'></div>
 </div>
 
 @endsection
