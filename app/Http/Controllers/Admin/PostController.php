@@ -10,6 +10,7 @@ use Illuminate\Support\Composer;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\PostRequest;
 
+
 class PostController extends Controller
 {
     /**
@@ -76,7 +77,8 @@ class PostController extends Controller
         $new_post->date = date('Y-m-d');
         if(array_key_exists('image', $form )){
           $form['image_original_name'] =  $request->file('image')->getClientOriginalName();
-          $form['image_path'] =  Storage::put('uploads/', $form['image']);
+          $form['image_path'] =  Storage::put('uploads', $form['image']);
+          // dd($form['image_path']);
         };
         $new_post->image_original_name = $form['image_original_name'];
         $new_post->image_path = $form['image_path'];
