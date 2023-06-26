@@ -56,6 +56,7 @@ export default {
       :title="post.title"
       :date="post.date"
       :text="post.text"
+      :img_pat="post.image_path"
       />
 
     </div>

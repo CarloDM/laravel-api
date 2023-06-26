@@ -6,6 +6,7 @@ export default {
     title: String,
     date: String,
     text: String,
+    img_pat: String,
   }
 
 }
@@ -16,6 +17,9 @@ export default {
     <h3>{{ title }}</h3>
     <p class="date">{{ date }}</p>
     <p class="text">{{ text }}</p>
+
+    <img v-if="img_pat"
+      class="thumb" :src=" 'http://127.0.0.1:8000/storage/' + img_pat " :alt="img_pat">
 
   </div>
 </template>
@@ -30,6 +34,11 @@ export default {
   & .date{}
   & .text{
     margin: 10px 0px;
+  }
+  & .thumb{
+    display: block;
+    width: 150px;
+    margin: 0px auto;
   }
 }
 
