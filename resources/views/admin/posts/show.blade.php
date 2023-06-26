@@ -12,7 +12,6 @@
   </div>
 
   <div class="card w-75 p-5 m-auto ">
-    <p>{{$post->image_path}}</p>
     <img class="w-100 m-auto" src="{{asset('storage/' . $post->image_path ) }}" alt="{{$post->image_path}}">
   </div>
 
