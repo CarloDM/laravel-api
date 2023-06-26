@@ -32,20 +32,6 @@ export default {
 </script>
 <template>
   <div class="main-wrapper">
-    <!-- <h3 class="m_1">posts API</h3> -->
-
-    <!-- <ul>
-      <li
-      v-for=" post in posts"
-      :key="post.id"
-      >
-      {{ post.title }}
-          <ul>
-            <li>{{ post.date }}</li>
-
-          </ul>
-      </li>
-    </ul> -->
 
     <h2 class="m_1">posts card</h2>
     <div class="card_container">
@@ -60,7 +46,6 @@ export default {
       />
 
     </div>
-
   </div>
 </template>
 <style lang="scss">
