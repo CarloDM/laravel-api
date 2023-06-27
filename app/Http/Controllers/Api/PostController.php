@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Author;
 
 class PostController extends Controller
 {
@@ -13,6 +14,13 @@ class PostController extends Controller
       $posts = Post::all();
       // dd($posts);
       return response()->json($posts);
+
+  }
+    public function authors() {
+
+      $authors = Author::all();
+      // dd($posts);
+      return response()->json($authors);
 
   }
 }

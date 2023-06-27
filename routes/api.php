@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PostController;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,5 +32,10 @@ Route::namespace('Api')
       ->prefix('post')
       ->group(function(){
           Route::get('/', [PostController::class , 'index'])->name('api-guest');
+      });
+Route::namespace('Api')
+      ->prefix('authors')
+      ->group(function(){
+          Route::get('/', [PostController::class , 'authors'])->name('api-guest-authors');
       });
 
