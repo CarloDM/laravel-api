@@ -24,4 +24,10 @@ class PostController extends Controller
       // dd($posts);
       return response()->json($authors);
   }
+    public function getPostsByAuthor($id) {
+
+      $posts = Post::all()->where('author_id', $id);
+      // dd($posts);
+      return response()->json($posts);
+  }
 }

@@ -32,10 +32,12 @@ Route::namespace('Api')
       ->prefix('post')
       ->group(function(){
           Route::get('/', [PostController::class , 'index'])->name('api-guest');
+          Route::get('/author-post/{id}', [PostController::class , 'getPostsByAuthor'])->name('api-guest-author-post');
       });
 Route::namespace('Api')
       ->prefix('authors')
       ->group(function(){
           Route::get('/', [PostController::class , 'getAuthors'])->name('api-guest-authors');
+
       });
 
