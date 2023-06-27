@@ -36,6 +36,6 @@ Route::namespace('Api')
 Route::namespace('Api')
       ->prefix('authors')
       ->group(function(){
-          Route::get('/', [PostController::class , 'authors'])->name('api-guest-authors');
+          Route::get('/', [PostController::class , 'getAuthors'])->name('api-guest-authors');
       });
 

@@ -9,6 +9,7 @@ use App\Models\Author;
 
 class PostController extends Controller
 {
+
     public function index() {
 
       $posts = Post::all();
@@ -16,11 +17,11 @@ class PostController extends Controller
       return response()->json($posts);
 
   }
-    public function authors() {
+
+    public function getAuthors() {
 
       $authors = Author::all();
       // dd($posts);
       return response()->json($authors);
-
   }
 }
