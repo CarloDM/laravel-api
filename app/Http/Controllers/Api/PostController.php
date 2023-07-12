@@ -30,4 +30,9 @@ class PostController extends Controller
       // dd($posts);
       return response()->json($posts);
   }
+  public function getPostBySlug($slug){
+    $post = Post::where('slug', $slug )->first();
+    // dd($post);
+    return response()->json($post);
+  }
 }

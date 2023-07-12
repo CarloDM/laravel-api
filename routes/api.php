@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\leadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PostController;
@@ -33,6 +34,7 @@ Route::namespace('Api')
       ->group(function(){
           Route::get('/', [PostController::class , 'index'])->name('api-guest');
           Route::get('/author-post/{id}', [PostController::class , 'getPostsByAuthor'])->name('api-guest-author-post');
+          Route::get('/{slug}', [PostController::class , 'getPostBySlug' ])->name('slug-post');
       });
 Route::namespace('Api')
       ->prefix('authors')
@@ -40,4 +42,7 @@ Route::namespace('Api')
           Route::get('/', [PostController::class , 'getAuthors'])->name('api-guest-authors');
 
       });
+
+// rotta per mail
+Route::post('/contacts', [leadController::class, 'store']);
 

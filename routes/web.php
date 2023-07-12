@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\AuthorController;
 */
 // rotte pubbliche
 Route::get('/', [PageController::class, 'index'])->name('home');
+
 Route::get('/elenco-posts', [PageController::class, 'posts'])->name('posts');
 Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
 Route::get('/dettaglio-post', [PageController::class, 'detail'])->name('detail');
